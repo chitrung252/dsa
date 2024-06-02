@@ -19,3 +19,5 @@ To
 Document install c++ on mac using clang
 
 https://code.visualstudio.com/docs/cpp/config-clang-mac#_run-helloworldcpp
+
+![Alt text](./example/test.drawio.svg)
