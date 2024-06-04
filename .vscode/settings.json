@@ -1,3 +1,13 @@
 {
-    "C_Cpp.default.compilerPath": "/usr/bin/clang++"
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "files.associations": {
+        ".env.development": "plaintext",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "vector": "cpp",
+        "new": "cpp"
+    }
 }
