@@ -1,6 +1,7 @@
 // Base on LeetCode
 // https://leetcode.com/explore/learn/card/linked-list/209/singly-linked-list/1290/
 
+// Using Head and Tail
 #include <iostream>
 
 using namespace std;
