@@ -96,12 +96,12 @@ int main() {
     q->enQueue(2);
     q->enQueue(3);
     // q->deQueue();
-    // q->detroyQueue();
+    q->detroyQueue();
     q->print();
 
     int first = q->front();
     if (first < 0) {
-        cout << "Queue is emoty: ";
+        cout << "Queue is empty";
     } else {
         cout << "Get first element in queue: " << first;
     }
