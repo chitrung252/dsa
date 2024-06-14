@@ -1,4 +1,7 @@
 // Stack with Linked List
+// https://www.scaler.com/topics/c/stack-using-linked-list-in-c/
+// struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
+
 #include <iostream>
 
 using namespace std;
