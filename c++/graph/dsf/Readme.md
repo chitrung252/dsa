@@ -1,0 +1,2 @@
+-   các đỉnh (vertices)
+-   các cạnh (edges)
