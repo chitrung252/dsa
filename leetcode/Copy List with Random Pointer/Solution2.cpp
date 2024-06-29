@@ -13,47 +13,39 @@ public:
     }
 };
 */
-// only with different value
+
 class Solution {
 public:
     Node *copyRandomList(Node *head) {
         print(head);
+        unordered_map<Node *, Node *> mapOldNode;
         Node *newHead = new Node(0);
-        ;
         Node *newNodeHead = newHead;
         Node *currentNode = head;
+
         while (currentNode) {
             Node *newNode = new Node(currentNode->val);
             newNodeHead->next = newNode;
+            newNodeHead->next->random = currentNode->random;
+
+            mapOldNode[currentNode] = newNode;
+
             currentNode = currentNode->next;
             newNodeHead = newNodeHead->next;
         }
 
-        currentNode = head;
         newNodeHead = newHead->next;
-        while (currentNode) {
 
-            if (currentNode->random) {
-                Node *nodeFound = search(newHead->next, currentNode->random->val);
-                if (nodeFound) {
-                    newNodeHead->random = nodeFound;
+        while (newNodeHead) {
+            if (newNodeHead->random) {
+                Node *foundNodeRandom = mapOldNode[newNodeHead->random];
+                if (foundNodeRandom) {
+                    newNodeHead->random = foundNodeRandom;
                 }
             }
             newNodeHead = newNodeHead->next;
-            currentNode = currentNode->next;
         }
         return newHead->next;
-    }
-
-    Node *search(Node *head, int val) {
-        Node *node = head;
-        while (node) {
-            if (node->val == val) {
-                return node;
-            }
-            node = node->next;
-        }
-        return nullptr;
     }
 
     void print(Node *head) {
