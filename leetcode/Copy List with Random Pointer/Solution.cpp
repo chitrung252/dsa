@@ -19,7 +19,6 @@ public:
     Node *copyRandomList(Node *head) {
         print(head);
         Node *newHead = new Node(0);
-        ;
         Node *newNodeHead = newHead;
         Node *currentNode = head;
         while (currentNode) {
